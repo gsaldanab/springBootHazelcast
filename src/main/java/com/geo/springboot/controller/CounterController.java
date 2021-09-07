@@ -14,16 +14,16 @@ import com.geo.springboot.service.CounterService;
 public class CounterController {
 	
 	@Autowired
-	private CounterService bookService;
+	private CounterService counterService;
 
 	@GetMapping("/count/{id}")
 	public int getCount(@PathVariable String id) {
-		return bookService.getCount(id);
+		return counterService.getCount(id);
 	}
 	
 	@PutMapping("/count/{id}")
 	public int setCount(@PathVariable String id) {
-		return bookService.addUnit(id);
+		return counterService.addUnit(id);
 	}
 
 }
